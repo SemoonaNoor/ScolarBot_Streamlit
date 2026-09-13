@@ -31,7 +31,7 @@ except Exception:
     st.stop()
 
 # --- Model and Chat Initialization ---
-model = genai.GenerativeModel(model_name="gemini-2.5-flash", system_instruction=persona_instruction)
+model = genai.GenerativeModel(model_name="gemini-3.6-flash", system_instruction=persona_instruction)
 
 if "chat" not in st.session_state:
     st.session_state.chat = model.start_chat(history=[])
