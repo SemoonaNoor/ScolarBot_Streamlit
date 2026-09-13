@@ -103,6 +103,7 @@ if prompt := st.chat_input("Ask about scholarships...") or st.session_state.pop(
                 print(f"AN ERROR OCCURRED: {e}")
                 assistant_response = "Sorry, I've run into a technical issue. Please try your question again."
                 st.error(assistant_response)
+                st.exception(e)
 
     # 3. Add the final assistant response to the chat history
     status_placeholder.text("Ready")
